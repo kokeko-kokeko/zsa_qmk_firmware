@@ -28,5 +28,3 @@
 [submodule "modules/zsa"]
 	path = modules/zsa
 	url = https://github.com/kokeko-kokeko/zsa_qmk_modules.git
-	branch = main
-
