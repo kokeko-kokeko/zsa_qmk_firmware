@@ -11,6 +11,11 @@
 #     include "defaults.h"
 #endif
 
+// disable boot-up animation and macro
+#undef DEFERRED_EXEC_ENABLE
+#undef DYNAMIC_MACRO_ENABLE
+#undef CAPS_LOCK_STATUS
+
 keyboard_config_t keyboard_config;
 
 bool mcp23018_leds[2] = {0, 0};
