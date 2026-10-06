@@ -74,6 +74,14 @@ void matrix_init_custom(void) {
     gpio_set_pin_input_low(A7);
     gpio_set_pin_input_low(B0);
 
+    // outputs to low power
+    palSetPadMode(GPIOB, 10, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+    palSetPadMode(GPIOB, 11, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+    palSetPadMode(GPIOB, 12, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+    palSetPadMode(GPIOB, 13, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+    palSetPadMode(GPIOB, 14, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+    palSetPadMode(GPIOB, 15, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+
     mcp23018_errors = mcp23018_init_local(true);
 
     if (!mcp23018_errors) {

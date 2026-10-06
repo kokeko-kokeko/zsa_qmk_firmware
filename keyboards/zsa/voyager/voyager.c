@@ -110,6 +110,11 @@ void keyboard_pre_init_kb(void) {
     gpio_write_pin_low(B4);
     gpio_write_pin_low(B3);
 
+    // LED output drive low power
+    palSetPadMode(GPIOB, 5, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+    palSetPadMode(GPIOB, 4, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+    palSetPadMode(GPIOB, 3, PAL_MODE_OUTPUT_PUSHPULL | PAL_STM32_OSPEED_LOWEST);
+
     keyboard_pre_init_user();
 }
 
